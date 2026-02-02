@@ -5,7 +5,7 @@ const sidebars = {
     fintechSidebar: [
         {
             type: 'doc',
-            id: 'home',
+            id: 'index',
             label: 'Pratibimba Home',
         },
         {
