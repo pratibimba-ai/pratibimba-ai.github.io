@@ -21,6 +21,11 @@ const config = {
 
     onBrokenLinks: 'throw',
 
+    markdown: {
+        mermaid: true,
+    },
+    themes: ['@docusaurus/theme-mermaid'],
+
     i18n: {
         defaultLocale: 'en',
         locales: ['en'],
@@ -49,6 +54,22 @@ const config = {
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             image: 'img/pratibimba-social-card.png',
+            mermaid: {
+                theme: { light: 'neutral', dark: 'forest' },
+                options: {
+                    themeVariables: {
+                        /* Dark Mode Variables */
+                        primaryColor: '#0e7490',
+                        primaryTextColor: '#ffffff',
+                        primaryBorderColor: '#22d3ee',
+                        lineColor: '#67e8f9',
+                        secondaryColor: '#1e293b',
+                        tertiaryColor: '#0f172a',
+                        fontSize: '14px',
+                        fontFamily: 'Inter, sans-serif',
+                    }
+                }
+            },
             navbar: {
                 title: 'Pratibimba',
                 logo: {
@@ -57,10 +78,15 @@ const config = {
                 },
                 items: [
                     {
-                        type: 'docSidebar',
-                        sidebarId: 'fintechSidebar',
+                        to: '/',
+                        label: 'Home',
                         position: 'left',
+                        activeBaseRegex: '^/$',
+                    },
+                    {
+                        to: '/fintech/',
                         label: 'Fintech Module',
+                        position: 'left',
                     },
                     {
                         // Keeping link to the original source code repository

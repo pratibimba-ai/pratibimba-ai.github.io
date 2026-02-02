@@ -227,8 +227,8 @@ Complete REST API with 20+ endpoints covering the full synthetic data lifecycle:
 
 ## Getting Started
 
+1. **[Quick Start Test Drive](./test-drive.md)** - Generate your first portfolio in 5 minutes
 1. **[Installation Guide](./architecture.md#deployment-architecture)** - Docker, Kubernetes, or bare metal
-2. **[Quick Start Tutorial](#quick-start)** - Generate your first portfolio in 5 minutes
 3. **[API Reference](./api-reference.md)** - Complete endpoint documentation
 4. **[Use Cases](./use-cases.md)** - Real-world applications
 

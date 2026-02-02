@@ -5,13 +5,23 @@ const sidebars = {
     fintechSidebar: [
         {
             type: 'doc',
+            id: 'index',
+            label: 'Pratibimba Home',
+        },
+        {
+            type: 'doc',
             id: 'fintech/index',
-            label: 'Overview',
+            label: 'Fintech Overview',
         },
         {
             type: 'doc',
             id: 'fintech/architecture',
             label: 'Architecture',
+        },
+        {
+            type: 'doc',
+            id: 'fintech/test-drive',
+            label: 'Test Drive (Sandbox)',
         },
         {
             type: 'category',
