@@ -30,7 +30,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          # Cache is disabled because no package-lock.json exists yet
+          # It will be created during 'npm install' on the runner
 
       - name: Install dependencies
         # Using install instead of ci because the user doesn't have local npm/lockfile
