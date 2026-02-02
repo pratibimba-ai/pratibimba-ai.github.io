@@ -74,8 +74,8 @@ Kolmogorov-Smirnov test for each numeric column.
 
 | Metric | Description | Pass Threshold |
 |--------|-------------|----------------|
-| `ks_statistic` | Max CDF difference | < 0.1 |
-| `p_value` | Statistical significance | > 0.05 |
+| `ks_statistic` | Max CDF difference | &lt; 0.1 |
+| `p_value` | Statistical significance | &gt; 0.05 |
 
 ```python
 result = validator.validate_distributions(original, synthetic)
@@ -90,8 +90,8 @@ Information-theoretic measure of distribution similarity.
 
 | Metric | Description | Pass Threshold |
 |--------|-------------|----------------|
-| `kl_divergence` | Bits of difference | < 0.5 |
-| `symmetric_kl` | (KL(P\|\|Q) + KL(Q\|\|P)) / 2 | < 0.3 |
+| `kl_divergence` | Bits of difference | &lt; 0.5 |
+| `symmetric_kl` | (KL(P\|\|Q) + KL(Q\|\|P)) / 2 | &lt; 0.3 |
 
 ```python
 result = validator.validate_kl_divergence(original, synthetic)
@@ -107,9 +107,9 @@ Ensures correlation structure is preserved.
 
 | Metric | Description | Pass Threshold |
 |--------|-------------|----------------|
-| `frobenius_error` | Matrix norm difference | < 0.2 |
-| `max_abs_error` | Largest single correlation difference | < 0.15 |
-| `average_error` | Mean absolute correlation difference | < 0.1 |
+| `frobenius_error` | Matrix norm difference | &lt; 0.2 |
+| `max_abs_error` | Largest single correlation difference | &lt; 0.15 |
+| `average_error` | Mean absolute correlation difference | &lt; 0.1 |
 
 ```python
 result = validator.validate_correlations(original, synthetic)
@@ -127,7 +127,7 @@ Validates that synthetic data maintains the same predictive power for credit sco
 |--------|-------------|----------------|
 | `gini_original` | Gini on original data | - |
 | `gini_synthetic` | Gini on synthetic data | - |
-| `gini_difference` | \|original - synthetic\| | < 0.05 |
+| `gini_difference` | \|original - synthetic\| | &lt; 0.05 |
 
 ```python
 result = validator.validate_gini(
@@ -227,7 +227,7 @@ for rec in report['recommendations']:
     "✓ Default rate within tolerance (3.58% vs 3.42% target)",
     "⚠ Consider reviewing 'income' distribution (KS=0.12)",
     "✓ Correlation structure well-preserved",
-    "✓ Gini coefficient difference < 0.01"
+    "✓ Gini coefficient difference &lt; 0.01"
   ]
 }
 ```
@@ -256,7 +256,7 @@ Overall Score = (
 | 75-89 | ✅ Good | Suitable for most use cases |
 | 60-74 | ⚠️ Acceptable | Review recommendations |
 | 40-59 | ❌ Poor | Significant discrepancies |
-| < 40 | ❌ Failed | Regenerate with different settings |
+| &lt; 40 | ❌ Failed | Regenerate with different settings |
 
 ---
 
@@ -298,9 +298,9 @@ The validator generates actionable recommendations based on results:
 | Issue Detected | Recommendation |
 |----------------|----------------|
 | High default rate error | "Adjust risk_grade_distribution to match target" |
-| KS test failure | "Column '{col}' shows distribution shift - review marginals" |
-| Correlation error > 0.15 | "Enable copulas for better correlation preservation" |
-| Gini difference > 0.05 | "Increase sample size or review generation parameters" |
+| KS test failure | "Column `{col}` shows distribution shift - review marginals" |
+| Correlation error &gt; 0.15 | "Enable copulas for better correlation preservation" |
+| Gini difference &gt; 0.05 | "Increase sample size or review generation parameters" |
 | Risk distribution mismatch | "Verify risk_grade_distribution config matches original" |
 
 ---

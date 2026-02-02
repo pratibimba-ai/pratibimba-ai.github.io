@@ -85,7 +85,7 @@ print(f"Privacy Level: {certificate['differential_privacy']['interpretation']}")
 
 **What it is:** Guarantee that every record is indistinguishable from at least k-1 other records based on quasi-identifiers.
 
-**Why k ≥ 5 for banks:** Regulatory guidance (OCC, FDIC) considers k < 5 as potentially re-identifiable.
+**Why k ≥ 5 for banks:** Regulatory guidance (OCC, FDIC) considers k &lt; 5 as potentially re-identifiable.
 
 **Automatic Enforcement:**
 ```python
@@ -116,7 +116,7 @@ print(f"Bank Compliant: {report['bank_compliant']}")
 
 **What it is:** Simulated adversarial attack to test if an attacker can determine whether a specific record was in the training data.
 
-**Pass Threshold:** Attack success rate < 55% (close to random guessing at 50%)
+**Pass Threshold:** Attack success rate &lt; 55% (close to random guessing at 50%)
 
 **How it works:**
 ```python
@@ -260,7 +260,7 @@ certificate = generator.generate_certificate(
     "notes": [
       "✓ K-anonymity ≥ 5 meets HIPAA Safe Harbor",
       "✓ ε ≤ 1.0 qualifies as anonymous under GDPR",
-      "✓ MIA success < 55% indicates strong privacy"
+      "✓ MIA success &lt; 55% indicates strong privacy"
     ]
   }
 }

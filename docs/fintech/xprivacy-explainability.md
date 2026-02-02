@@ -190,10 +190,10 @@ explanation = explainer.explain_k_anonymity(k=8)
 
 | Attack Rate | Risk Level | Headline |
 |-------------|------------|----------|
-| < 52% | VERY_LOW | Excellent Privacy - No Leakage Detected |
-| < 55% | LOW | Good Privacy - Minimal Leakage |
-| < 65% | MEDIUM | Caution - Some Information Leakage |
-| < 80% | HIGH | Warning - Significant Information Leakage |
+| &lt; 52% | VERY_LOW | Excellent Privacy - No Leakage Detected |
+| &lt; 55% | LOW | Good Privacy - Minimal Leakage |
+| &lt; 65% | MEDIUM | Caution - Some Information Leakage |
+| &lt; 80% | HIGH | Warning - Significant Information Leakage |
 | ≥ 80% | CRITICAL | Critical - Major Privacy Breach Risk |
 
 ### Example Explanation (52% success rate)
