@@ -435,6 +435,6 @@ When generating more samples than original:
 ## Related Documentation
 
 - [Credit Portfolio Generator →](./credit-portfolio-generator.md) - Generate from scratch
-- [Gaussian Copula Deep Dive →](./copula-technical.md) - Mathematical details
+- [Gaussian Copula Deep Dive →](#gaussian-copula-engine-details) - Mathematical details
 - [Privacy Guarantees →](./privacy-guarantees.md) - Privacy framework
 - [API Reference →](./api-reference.md) - Complete API documentation

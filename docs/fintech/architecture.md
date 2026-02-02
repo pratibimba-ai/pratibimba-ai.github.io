@@ -376,7 +376,7 @@ spec:
 | **Differential Privacy** | ε-bounded noise injection |
 | **K-Anonymity** | Minimum k=5 enforced for all outputs |
 | **Privacy Budgeting** | Per-dataset cumulative ε tracking |
-| **Membership Inference Protection** | Attack success rate <55% verified |
+| **Membership Inference Protection** | Attack success rate &lt;55% verified |
 
 ### Compliance
 
