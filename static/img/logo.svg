@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0891b2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#22d3ee;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Main circle -->
+  <circle cx="100" cy="100" r="85" fill="url(#gradient)" />
+  <!-- Reflection symbol - stylized P -->
+  <path d="M70 50 L70 150 L85 150 L85 115 L110 115 Q145 115 145 82.5 Q145 50 110 50 Z M85 65 L110 65 Q130 65 130 82.5 Q130 100 110 100 L85 100 Z" fill="white" />
+  <!-- Mirror reflection lines -->
+  <line x1="60" y1="155" x2="140" y2="155" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <line x1="70" y1="165" x2="130" y2="165" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+</svg>
